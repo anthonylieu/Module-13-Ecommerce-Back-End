@@ -23,7 +23,7 @@ Then `npm start` use Insomnia or somthing similer to test the routes
 
 ## Usage
 
-Here is a walkthrough video showing how it all works
+[Walkthrough Video](https://drive.google.com/file/d/1XI022gLHYt_F8obMyD35KTj6PQa09CNA/view)
 
 ## License
 
