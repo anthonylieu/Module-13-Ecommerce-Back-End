@@ -1,10 +1,11 @@
+// Import necessary dependencies
 const router = require('express').Router();
 const { Category, Product } = require('../../models');
 
-// The `/api/categories` endpoint
+// Define the '/api/categories' endpoint
 
+// Retrieve all categories, including associated products
 router.get('/', (req, res) => {
-  // find all categories
   Category.findAll({
     include: {
       model: Product,
@@ -16,11 +17,10 @@ router.get('/', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-  // be sure to include its associated Products
 });
 
+// Retrieve a single category by its id, including associated products
 router.get('/:id', (req, res) => {
-  // find one category by its `id` value
   Category.findOne({
     where: { id: req.params.id },
     include: {
@@ -39,11 +39,10 @@ router.get('/:id', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-  // be sure to include its associated Products
 });
 
+// Create a new category
 router.post('/', (req, res) => {
-  // create a new category
   Category.create({
     category_name: req.body.category_name,
   })
@@ -54,8 +53,8 @@ router.post('/', (req, res) => {
     });
 });
 
+// Update a category by its id
 router.put('/:id', (req, res) => {
-  // update a category by its `id` value
   Category.update(req.body, {
     where: {
       id: req.params.id,
@@ -74,8 +73,8 @@ router.put('/:id', (req, res) => {
     });
 });
 
+// Delete a category by its id
 router.delete('/:id', (req, res) => {
-  // delete a category by its `id` value
   Category.destroy({
     where: {
       id: req.params.id,
@@ -94,4 +93,5 @@ router.delete('/:id', (req, res) => {
     });
 });
 
+// Export the router for use in other parts of the application
 module.exports = router;
