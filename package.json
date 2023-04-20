@@ -1,0 +1,32 @@
+{
+  "name": "module-13-ecommerce-back-end",
+  "version": "1.0.0",
+  "description": "## Description",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeds/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/anthonylieu/Module-13-Ecommerce-Back-End.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.31.0"
+  },
+  "bugs": {
+    "url": "https://github.com/anthonylieu/Module-13-Ecommerce-Back-End/issues"
+  },
+  "homepage": "https://github.com/anthonylieu/Module-13-Ecommerce-Back-End#readme"
+}
